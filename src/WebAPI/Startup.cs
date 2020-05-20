@@ -1,3 +1,5 @@
+using Amazon.DynamoDBv2;
+using Amazon.SQS;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +22,10 @@ namespace WebAPI
         {
             services.AddControllers();
             services.RegisterServices();
+
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonDynamoDB>();
+            services.AddAWSService<IAmazonSQS>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

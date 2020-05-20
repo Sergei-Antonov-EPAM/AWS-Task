@@ -1,11 +1,18 @@
 ﻿using Entities;
+using System.Threading.Tasks;
 
 namespace BLL.Interfaces
 {
     public interface IBookLogic
     {
-        public void Add(Book book);
+        Task Add(Book book);
 
-        public Book[] GetAll();
+        Task Remove(string isbn);
+
+        Task Update(string isbn, Book book);
+
+        Task<Book[]> GetAll();
+
+        Task<Book> GetByISBN(string isbn);
     }
 }

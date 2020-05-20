@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.106.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DAL.Interfaces\DAL.Interfaces.csproj" />
   </ItemGroup>
 

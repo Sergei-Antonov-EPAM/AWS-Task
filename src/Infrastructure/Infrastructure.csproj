@@ -12,6 +12,8 @@
     <ProjectReference Include="..\BLL.Interfaces\BLL.Interfaces.csproj" />
     <ProjectReference Include="..\BLL\BLL.csproj" />
     <ProjectReference Include="..\DAL.DynamoDB\DAL.DynamoDB.csproj" />
+    <ProjectReference Include="..\Queues.Interfaces\Queues.Interfaces.csproj" />
+    <ProjectReference Include="..\Queues.SQS\Queues.SQS.csproj" />
   </ItemGroup>
 
 </Project>

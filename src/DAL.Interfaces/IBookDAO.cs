@@ -1,11 +1,18 @@
 ﻿using Entities;
+using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
     public interface IBookDAO
     {
-        public void Add(Book book);
+        Task Add(Book book);
 
-        public Book[] GetAll();
+        Task Remove(string isbn);
+
+        Task Update(string isbn, Book book);
+
+        Task<Book[]> GetAll();
+
+        Task<Book> GetByISBN(string isbn);
     }
 }

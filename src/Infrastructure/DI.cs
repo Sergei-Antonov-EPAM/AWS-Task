@@ -3,6 +3,8 @@ using BLL.Interfaces;
 using DAL.DynamoDB;
 using DAL.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Queues.Interfaces;
+using Queues.SQS;
 
 namespace Infrastructure
 {
@@ -12,7 +14,7 @@ namespace Infrastructure
         {
             services.AddTransient<IBookLogic, BookLogic>();
             services.AddTransient<IBookDAO, BookDAO>();
+            services.AddTransient<IBookQueue, BookQueue>();
         }
     }
-
 }
