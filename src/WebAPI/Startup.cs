@@ -34,6 +34,10 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
 
             app.UseHttpsRedirection();
             app.UseRouting();
