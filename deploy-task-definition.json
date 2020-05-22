@@ -16,7 +16,7 @@
       ],
       "command": null,
       "linuxParameters": null,
-      "cpu": null,
+      "cpu": 0,
       "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
@@ -25,7 +25,7 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": 512,
+      "memory": 128,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
@@ -46,7 +46,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "book-app"
+      "name": "book-app-container"
     }
   ],
   "placementConstraints": [],
@@ -55,8 +55,8 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:167843307789:task-definition/book-app-deploy:30",
-  "family": "book-app-deploy",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:167843307789:task-definition/book-app-task-def:5",
+  "family": "book-app-task-def",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -81,9 +81,9 @@
   "requiresCompatibilities": [
     "EC2"
   ],
-  "networkMode": null,
+  "networkMode": "bridge",
   "cpu": null,
-  "revision": 30,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,

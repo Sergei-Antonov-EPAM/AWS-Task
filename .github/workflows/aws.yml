@@ -47,6 +47,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: book-service
-        cluster: book-app-cluster
+        service: book-app-svc
+        cluster: book-app-clstr
         wait-for-service-stability: true
