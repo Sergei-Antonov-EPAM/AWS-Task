@@ -1,8 +1,8 @@
 on:
-  push:
-    branches: [ lambda ]
+  pull_request:
+    branches: [ master, develop ]
 
-name: Deploy lambda
+name: AWS Lambda Deployment
 
 jobs:
   deploy:
