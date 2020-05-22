@@ -39,11 +39,11 @@ namespace WebAPI
                 app.UseExceptionHandler("/Error");
             }
 
+            app.UseCors(b => b.AllowAnyOrigin());
+
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
-
-            app.UseCors(b => b.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
