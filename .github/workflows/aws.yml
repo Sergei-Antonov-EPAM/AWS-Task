@@ -40,13 +40,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: deploy-task-definition.json
-        container-name: book-app
+        container-name: book-lib-container
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: book-app-service
-        cluster: book-app-cluster
+        service: book-lib-service
+        cluster: book-lib-cluster
         wait-for-service-stability: true
